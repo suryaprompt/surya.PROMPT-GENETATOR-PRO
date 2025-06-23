@@ -1,4 +1,3 @@
-# surya.PROMPT-GENETATOR-PRO
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -82,47 +81,12 @@
             padding: 1rem; /* p-4 */
             border-radius: 0.5rem; /* rounded-lg */
         }
-        /* Styles for Modals */
-        .modal-container {
-            position: fixed;
-            inset: 0;
-            background-color: rgba(0,0,0,0.85);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            z-index: 50;
-        }
-        .modal-content {
-            background-color: #1F2937; /* bg-gray-800 */
-            border-radius: 0.5rem; /* rounded-lg */
-            padding: 2rem;
-            max-width: 24rem; /* max-w-sm */
-            width: 100%;
-            text-align: center;
-            position: relative;
-        }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
 
-    <!-- Follow Modal -->
-    <div id="follow-modal" class="hidden modal-container">
-        <div class="modal-content">
-            <h3 class="text-2xl font-bold mb-2">Akses Terbatas!</h3>
-            <p class="text-gray-300 mb-6">Untuk menggunakan tool ini, mohon follow TikTok kami terlebih dahulu. Terima kasih atas dukungannya!</p>
-            <a href="https://www.tiktok.com/@surya.ishwara" target="_blank" class="btn btn-blue w-full mb-3">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                Follow TikTok
-            </a>
-            <button id="confirm-follow-btn" class="btn btn-green w-full">
-                Saya Sudah Follow
-            </button>
-        </div>
-    </div>
-
-    <!-- Landing Screen (Initially Hidden) -->
-    <div id="landing-screen" class="hidden min-h-screen flex-col items-center justify-center text-center p-4">
+    <!-- Landing Screen -->
+    <div id="landing-screen" class="min-h-screen flex flex-col items-center justify-center text-center p-4">
         <p class="text-xl md:text-2xl text-gray-300 mb-2">Kreasikan imajinasi dan idemu</p>
         <h1 class="text-4xl md:text-6xl font-black mb-8 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">Surya.PromptGeneratorPRO</h1>
         <button id="start-btn" class="btn btn-green text-2xl shadow-lg transform hover:scale-105">
@@ -131,7 +95,7 @@
         </button>
     </div>
 
-    <!-- Main App Screen -->
+    <!-- Main App Screen (Initially Hidden) -->
     <div id="app-screen" class="hidden p-4 md:p-8 max-w-7xl mx-auto">
         <header class="flex justify-between items-center mb-8">
             <h2 class="text-3xl font-bold">Prompt Generator</h2>
@@ -297,9 +261,20 @@
                 <div id="info-card" class="card">
                     <h3 class="text-xl font-bold mb-4">Info Pembuat</h3>
                     <p class="text-gray-300 mb-4">Aplikasi ini dibuat oleh Surya Ishwara.</p>
-                    <a href="https://www.tiktok.com/@surya.ishwara" target="_blank" class="btn btn-blue w-full">
-                        Kunjungi TikTok @surya.ishwara
-                    </a>
+                    <div class="space-y-3">
+                        <a href="https://www.tiktok.com/@surya.ishwara" target="_blank" class="btn btn-blue w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            Kunjungi TikTok
+                        </a>
+                         <a href="https://www.facebook.com/surya.ishwara" target="_blank" class="btn btn-blue w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                            Kunjungi Facebook
+                        </a>
+                         <a href="https://www.youtube.com/@surya.ishwara" target="_blank" class="btn btn-blue w-full">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                            Kunjungi YouTube
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -400,8 +375,6 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     // --- ELEMENT SELECTIONS ---
-    const followModal = document.getElementById('follow-modal');
-    const confirmFollowBtn = document.getElementById('confirm-follow-btn');
     const landingScreen = document.getElementById('landing-screen');
     const appScreen = document.getElementById('app-screen');
     const startBtn = document.getElementById('start-btn');
@@ -438,30 +411,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const locationCard = document.getElementById('location-card');
     const dialogsCard = document.getElementById('dialogs-card');
 
-    // --- INITIALIZATION FLOW ---
-
-    function showLandingScreen() {
-        landingScreen.classList.remove('hidden');
-        landingScreen.classList.add('flex', 'flex-col');
-    }
-
-    if (localStorage.getItem('hasConfirmedFollow') === 'true') {
-        showLandingScreen();
-    } else {
-        followModal.classList.remove('hidden');
-    }
-
     // --- EVENT LISTENERS ---
-
-    confirmFollowBtn.addEventListener('click', () => {
-        localStorage.setItem('hasConfirmedFollow', 'true');
-        followModal.classList.add('hidden');
-        showLandingScreen();
-    });
     
     startBtn.addEventListener('click', () => {
         landingScreen.classList.add('hidden');
-        landingScreen.classList.remove('flex', 'flex-col');
         appScreen.classList.remove('hidden');
     });
 
